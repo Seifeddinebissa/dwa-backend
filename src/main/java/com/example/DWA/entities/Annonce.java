@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,7 +24,7 @@ public class Annonce {
     private String ville;
     private String addresse;
     private String description;
-
+    private Date dateCreation;
     @ManyToOne
     @JoinColumn(name = "utilisateur")
     private Utilisateur utilisateur;

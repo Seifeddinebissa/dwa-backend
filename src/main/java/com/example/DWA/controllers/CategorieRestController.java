@@ -32,7 +32,7 @@ public class CategorieRestController {
         return categorieService.getAllCategories();
     }
     @RequestMapping(value = "/consulterCategorie/{id}", method = RequestMethod.GET)
-    public void consulterCategorie(@PathVariable("id") Long id){
-        categorieService.consulterCategorie(id);
+    public Categorie consulterCategorie(@PathVariable("id") Long id){
+        return categorieService.consulterCategorie(id);
     }
 }
